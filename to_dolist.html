@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TO_do_list</title>
+  <link rel="stylesheet" href="todolist.css">
+</head>
+
+<body>
+  <div id="heading">
+    <h3 id="a">TO DO LIST</h3>
+  </div>
+  <div id="bb">
+    <h2> Add Yours Today's work here </h2>
+  </div>
+  <div id="main_content">
+    <input id="work" type="text" placeholder="Enter your today work ...  ">
+    <button id="add"> Add </button>
+
+    <div id="installed">
+
+    </div>
+  </div>
+</body>
+<script>
+  const work = document.querySelector('#work');
+  const add = document.querySelector('#add');
+  const installed = document.querySelector('#installed');
+
+
+  add.addEventListener('click', function () {
+    const holder = document.createElement('div');
+    if (work.value.trim() !== "") {
+
+
+      // create a checkbox 
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      holder.appendChild(checkbox);
+      checkbox.addEventListener('change', function () {
+        if (checkbox.checked) {
+          material.style.textDecoration = "line-through"
+        }
+        else {
+          material.style.textDecoration = "none"
+        }
+
+      })
+
+
+      // created the input material holder
+      let material = document.createElement('span');
+      material.innerText = work.value;
+      work.value = "";
+      material.style.marginright = "50px";
+      holder.appendChild(material);
+
+
+      // created the deldete button 
+      const del = document.createElement('button');
+      del.innerText = "delete";
+      del.style.backgroundColor = "red";
+      del.style.color = "white";
+      del.style.marginright = "50px";
+      holder.appendChild(del);
+
+
+      // create edit button
+
+      const edit = document.createElement('button')
+      edit.innerText = "Edit"
+      edit.style.backgroundColor = "blue";
+      edit.style.color = "white"
+      holder.appendChild(edit);
+
+
+      installed.appendChild(holder);
+
+      // delete event Here 
+      del.addEventListener('click', function () {
+        holder.remove();
+      })
+
+
+
+      edit.addEventListener("click", function () {
+
+        if (edit.innerText === "Edit") {
+
+          // Span -> Input
+          const input = document.createElement("input");
+          input.type = "text";
+          input.value = material.innerText;
+          material.replaceWith(input);
+          material = input;
+
+          // Edit -> Save
+          edit.innerText = "Save";
+          edit.style.backgroundColor = "yellow";
+          edit.style.color = "black";
+
+        } else {
+
+          // Input -> Span
+          const span = document.createElement("span");
+          span.innerText = material.value;
+          material.replaceWith(span);
+          material = span;
+
+          // Save -> Edit
+          edit.innerText = "Edit";
+          edit.style.backgroundColor = "blue";
+          edit.style.color = "white";
+        }
+
+      });
+
+    }
+  })
+</script>
+
+</html>

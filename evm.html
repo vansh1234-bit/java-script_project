@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="evm.css">
+</head>
+
+<body>
+  <Div id="bjp_win" style="display: none ">
+    <h1> VOTING OVER </h1>
+    <h2> BJP WINS </h2>
+  </Div>
+  <div id="all">
+    <h1 id="heading">VOTE HERE </h1>
+    <h2 id="tv"> total voter : 10 </h2>
+    <!-- <var>totalvote = 10</var> ;  -->
+    <H3> Select one party whome you want to vote </H3>
+
+    <div id="party_id">
+      <img id="bjp"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3vsjIh5WEWJEMXZF9tHW4DlOvCT8gLGDojwO9LNSs2A&s"
+        alt="bjp_logo" height="50px">
+      <img id="congress"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzw1hDYUAbb6f1u4crKza31pyiQHWbvFue9SCNSQjB3g&s"
+        height="50px">
+      <img id="aap"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMW2SzFG9qVMBwoZB27KfwMLJK0zkIBX-SpZcDAUzw&s"
+        alt="aap_logo" height="50px">
+      <img id="nota"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH-wcBpsFuBbQ6krR6-67lg6UbqL9X9ws3USh-BUaJrA&s"
+        alt="nota_logo" height="50px" ;>
+    </div>
+  </div>
+  <div id="live_count">
+    <h2 id="result-status"> Live result </h2>
+    <div>BJP : <P id="bjpcount"> 0 </P>
+    </div>
+    <div> Congress : <P id="congresscount"> 0 </P>
+    </div>
+    <div> AAP : <p id="aapcount"> 0</p>
+    </div>
+    <div> NOTA : <p id="notacount"> 0 </p>
+    </div>
+
+  </div>
+
+</body>
+
+
+<script>
+  // BJP voting 
+  const totalvote = 10;
+  var alreaydone = 0;
+
+  function exit() {
+    if (alreaydone === totalvote) {
+      document.querySelector('#bjp_win').style.display = "block";
+      document.querySelector('#result-status').innerText = "RESULTS ARE SHOWN BELOW : "
+      const all = document.querySelector('#all')
+      all.style.display = "none";
+      document.querySelector('#live_count').style.display = "block";
+    }
+  }
+  const bjpPhoto = document.querySelector('#bjp')
+  const bjpcount = document.querySelector('#bjpcount')
+  // const tv = document.querySelector('tv');
+  var countbjp = 1;
+  bjpPhoto.addEventListener('click', function () {
+    bjpcount.innerText = countbjp;
+    alreaydone = alreaydone + 1;
+    countbjp = countbjp + 1;
+    console.log(alreaydone);
+    exit();
+  })
+
+
+  let total_opp_vote = 0;
+
+
+  // congress voting 
+  const congreePhoto = document.querySelector('#congress');
+  const congresscount = document.querySelector('#congresscount');
+  var countcon = 1;
+  congreePhoto.addEventListener('click', function () {
+    if (total_opp_vote + 1 < (totalvote / 2)) {
+      congresscount.innerText = countcon;
+      total_opp_vote = total_opp_vote + 1;
+      countcon = countcon + 1;
+      alreaydone = alreaydone + 1;
+      console.log(alreaydone);
+      exit();
+    }
+    else {
+
+      bjpcount.innerText = countbjp;
+      countbjp = countbjp + 1;
+      alreaydone = alreaydone + 1;
+      console.log(alreaydone);
+      exit();
+    }
+  })
+
+
+
+
+  // aap voting 
+  const aapphoto = document.querySelector('#aap');
+  const aapcount = document.querySelector('#aapcount');
+  var countapp = 1;
+  aapphoto.addEventListener('click', function () {
+    if (total_opp_vote + 1 < (totalvote / 2)) {
+      aapcount.innerText = countapp;
+      total_opp_vote = total_opp_vote + 1;
+      countapp = countapp + 1;
+      alreaydone = alreaydone + 1;
+      console.log(alreaydone);
+      exit();
+    }
+    else {
+
+      bjpcount.innerText = countbjp;
+      countbjp = countbjp + 1;
+      alreaydone = alreaydone + 1;
+      console.log(alreaydone);
+      // bjpcount.innerText = countbjp;
+      exit();
+    }
+  })
+
+
+  // nota vote 
+  const NOTAphoto = document.querySelector('#nota');
+  const notocount = document.querySelector('#notacount');
+  var countnota = 1;
+  NOTAphoto.addEventListener('click', function () {
+    if (total_opp_vote + 1 < (totalvote / 2)) {
+      notocount.innerText = countnota;
+      total_opp_vote = total_opp_vote + 1;
+      countnota = countnota + 1;
+      alreaydone = alreaydone + 1;
+      console.log(alreaydone);
+
+      exit();
+    }
+    else {
+      bjpcount.innerText = countbjp;
+      countbjp = countbjp + 1;
+      alreaydone = alreaydone + 1;
+      console.log(alreaydone);
+      exit();
+    }
+    // bjpcount.innerText = countbjp;
+  })
+
+</script>
+
+</html>

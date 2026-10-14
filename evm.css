@@ -1,0 +1,24 @@
+#party_id{
+  display : flex ;
+  justify-content: space-evenly ;
+}
+/* #party{
+  border : 2px solid black ; 
+} */
+
+
+#live_count{
+  font-size : 20px ; 
+}
+
+
+#bjp_win{
+  display : flex ;
+  justify-content: center ;
+  font-size : 25px ; 
+}
+
+
+*{
+  background-color : rgb(245, 203, 203) ; 
+}

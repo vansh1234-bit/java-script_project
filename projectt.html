@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pro1</title>
+</head>
+
+<body>
+  <!-- <label style="font-size : 20px "> Yours Views about us : </label>
+  <input id="text" type="text" placeholder=""> </input>
+
+  <p> Characters : <span id="count">0</span>/100</p>
+  var words = 0 ; -->
+  <!-- <button id=button>click me</button> -->
+
+  <!-- <label> Enter Your Detailes </label>
+  <input id="input" type="text" placeholder=""><input>
+  <input id="me" type="text" placeholder="Enter YourSelf"> </input>
+  <button id="button">Hide</button>
+  <p> password : <span id="Password"> easy </span></p> -->
+  <!-- <label> Enter Something </label>
+  <input id="ans" type="text"></input>
+  <div id="same_as_above"> </div> -->
+
+  <!-- <label> Enter Your Name </label>
+  <input type="text" id="enter"> </input>
+  <div>
+    <button> Greet </button>
+  </div>
+  <div id="greet"></div> -->
+
+  <!-- <select id="color">
+    <option value=" "> Select a color </option>
+    <option value="blue">Blue</option>
+    <option value="red">Red</option>
+    <option value="green">Green</option>
+    <option value="voilet"> Voilet</option>
+  </select>
+  <p id="para" style="font-size : 20px "> Choose a Color </p> -->
+
+  <!-- <label>"Pleas Enter Any key </label>
+  <input id="press" placeholder=""></input>
+  <p id="para" style="font-size : 20px">waiting for key pressing </p> -->
+
+
+  <!-- <form id="form">
+    <label> Enter your Name </label>
+    <input id="name" placeholder="">
+    <label> Enter Password </label>
+    <input id="password" placeholder="">
+    <button id="summit"> summit</button>
+    <alert id="comment"></alert>
+  </form> -->
+
+
+  <div id="div"> "please hover me "</div>
+  <div id="message"></div>
+</body>
+
+<script>
+  const div = document.querySelector('#div');
+  const message = document.querySelector('#message');
+
+  div.addEventListener("mouseover", function (e) {
+    // message.innerText = "you hovered at me";
+    console.log(e);
+  })
+
+  // div.addEventListener("mouseout", function (e) {
+  //   message.innerText = "";
+  // })
+
+
+
+
+
+
+
+
+
+
+
+  // const username = document.querySelector("#name");
+  // const password = document.querySelector("#password");
+  // const form = document.querySelector("#form");
+  // const comment = document.querySelector("#comment");
+
+  // form.addEventListener("submit", function (e) {
+  //   e.preventDefault();
+
+  //   if (username.value === "" || password.value === "") {
+  //     comment.innerText = "Please fill all fields";
+  //   } else {
+  //     comment.innerText = "Login successful";
+  //   }
+  // });
+
+
+
+  // const press = document.querySelector('#press');
+  // const para = document.querySelector('#para');
+
+  // press.addEventListener("keyup", function (e) {
+  //   // console.log(e.target.value);
+  //   // console.log(e.key);
+  //   console.log(e);
+  //   para.innerText = "you drop " + e.key + " key";
+
+  // });
+
+  // const color = document.getElementById('color');
+  // const para = document.querySelector('#para');
+
+  // color.addEventListener('change', function (e) {
+  //   para.innerText = "you have choosen " + e.target.value + " color";
+  // });
+
+
+
+</script>
+<!-- <script>
+  const greet = document.querySelector('#greet');
+  const name = document.querySelector('#enter');
+  const button = document.querySelector('button');
+  button.addEventListener('click', function (e) {
+    if (name.value != '') {
+      greet.innerText = "Hello " + name.value + " How are you "
+    }
+    else {
+      greet.innerText = "enter your name first ";
+    }
+  });
+</script> -->
+<!-- <script>
+  const same = document.querySelector('#same_as_above');
+  document.querySelector('#ans').addEventListener('input', function (e) {
+    // console.log(e.target.value);
+    same.innerText = e.target.value;
+  });
+</script> -->
+<!-- show hide details  -->
+<!-- -- ><script>
+  const input = document.querySelector('#me');
+  const button = document.querySelector('#button')
+  button.addEventListener('click', function (e) {
+    if (e.target.innerText == "Hide") {
+      e.target.innerText = "show";
+      input.type = 'password'; -->
+<!-- } -->
+<!-- else {
+       e.target.innerText = "Hide";
+       input.type = "text";
+     }
+  -- // }); -->
+<!-- // const input = document.querySelector('#me');
+   const type = document.querySelector('#Password')
+   input.addEventListener('input', function (e) {
+     // console.log(e.target.value);
+     if (e.target.value.length <= 6) {
+       type.innerText = 'easy';
+     }
+     else if (e.target.value.length < 15 && e.target.value.length > 6)
+       type.innerText = 'Medium';
+     else {
+       type.innerText = 'Hard';
+     
+   }); -->
+<!-- </script> -->
+<!-- button clicked -->
+<!-- <script>
+  document.querySelector('#button').addEventListener('click', function (e) {
+    console.log(e.target);
+    if (e.target.innerText === "click me") {
+      e.target.innerText = "you clicked it "
+    }
+    else {
+      e.target.innerText = "click me";
+    }
+  });
+
+
+// find length of the charters 
+</script> -->
+<!-- <script>
+  const input = document.querySelector('#text');
+  const count = document.querySelector('#count');
+  // console.log(input);
+  input.addEventListener('input', function (e) {
+    // console.log(e.target.value.length);
+    count.innerText = e.target.value.length;
+  });
+</script> -->
+
+</html>

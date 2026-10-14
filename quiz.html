@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Maker </title>
+  <link rel="stylesheet" href="quix.css">
+</head>
+
+<body>
+  <h1 id="h11"> WELCOME TO MY QUIZ</h1>
+  <button id="start"> Click here to start </button>
+  <div id="all">
+    <div id="q1" class="cq">
+      <p> 1. Which language is mainly used to make web pages interactive ?</p>
+
+      <!-- <button id="first"> 1. CSS</button>
+      <button id="second"> 2. JS</button>
+      <button id="third">3 . HTML</button>
+      <button id="fourth">4. JAVA</button> -->
+
+      <input type="radio"> CSS
+      <input type="radio">HTML
+      <input type="radio"> JS
+      <input type="radio"> JAVA
+      <div id="q1"></div> ;
+      <p style="display : none ">const correctAns = "JS"</p>
+    </div>
+
+
+    <h2 id="q2" class="cq"> 2. Which keyword is used to declare a constant in JavaScript?
+      var correctAns = "CONST"
+      <button id="first"> 1. CONST</button>
+      <button id="second"> 2. VAR</button>
+      <button id="third">3 . INT </button>
+      <button id="fourth">4. LET </button>
+      var correctAns = "CONST"
+    </h2>
+
+    <h2 id="q3" class="cq"> 3. Which method is used to add an event listener?
+      var correctAns = "AddEventListener"
+      <button id="first"> 1. AddEvent</button>
+      <button id="second"> 2. AddEventListener</button>
+      <button id="third">3. EventLIStener </button>
+      <button id="fourth">4. NONE </button>
+    </h2>
+
+    <h2 id="q4" class="cq"> 4 . Which keyword waits for a Promise to complete?
+      var correctAns = "await"
+      <button id="first"> 1. await</button>
+      <button id="second"> 2. stop</button>
+      <button id="third">3. pause </button>
+      <button id="fourth">4. wait </button>
+    </h2>
+
+    <h2 id="q5" class="cq"> 5. which is best odi player of all time ?
+      var correctAns = "Virat"
+      <button id="first"> 1.Dhoni</button>
+      <button id="second"> 2. Sachine </button>
+      <button id="third">3. Virat </button>
+      <button id="fourth">4. Rohit Sharma </button>
+      <button id="last"> 5. NONE of the above </button>
+    </h2>
+  </div>
+</body>
+<script>
+  const start = document.querySelector('#start');
+  const heading = document.querySelector('#h11');
+
+
+  start.addEventListener('click', function () {
+    setInterval(function () {
+      if (q1.button.value == "JS") {
+        // console.log("Yes You gave Correct answer")
+        q1.div.innerText = Correct_answer;
+      }
+    })
+    const one = document.querySelector('#q1');
+    console.log(one);
+    one.style.display = "block";
+    heading.style.display = "none";
+    start.style.display = "none";
+  })
+
+
+</script>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asyn</title>
+</head>
+
+<body>
+  <h1>vansh saini </h1>
+  <button id="stop"> Stop</button>
+  <button id="start"> start </button>
+</body>
+
+
+<script>
+  let interId;
+  const start = document.querySelector('#start')
+  start.addEventListener('click', function () {
+    interId = setInterval(function () {
+      console.log("yes i am here ");
+    }, 500)
+  });
+  const stop = document.querySelector('#stop')
+  stop.addEventListener('click', function () {
+    console.log("i am off now ");
+    clearInterval(interId);
+  });
+
+
+
+
+
+
+
+  // const sayDate = function (str) {
+  //   console.log(str);
+  // }
+
+  // const intervalId = setInterval(sayDate, 1000, "hi");
+  // clearInterval(intervalId);
+
+
+
+
+  // const changevansh = function () {
+  //   document.querySelector('h1').innerHTML = "Hello world";
+  // }
+  // const changeMe = setTimeout(changevansh, 3000);
+
+  // const button = document.querySelector('#stop');
+  // button.addEventListener('click', function (e) {
+  //   console.log("clicked");
+  //   clearTimeout(changeMe);
+  //   button.innertext = "clicked";
+
+  // })
+  // clearTimeout(changeMe);
+
+  // set intraval
+  // setInterval(function () {
+  //   console.log("vansh", Date.now())
+  // }, 1000);
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="one.css">
+</head>
+
+<body style="background-color : #212121 ; color : #fff ">
+  <ul class="language">
+    <li> jave script</li>
+    <li> jave </li>
+    <li> css </li>
+    <li> python </li>
+  </ul>
+
+
+</body>
+<script>
+  // prev video 
+  // const div = document.createElement('div');
+  // div.className = "main";
+  // div.id = Math.round(Math.random())
+  // div.setAttribute('gender', "male");
+  // div.style.color = "blue";
+  // div.style.backgroundColor = "green";
+  // div.innerText = "Hii my name is vansh";
+  // const addtext = document.createTextNode("Hii my name is vansh");
+  // div.appendChild(addtext);
+  // console.log(div);
+  // document.body.appendChild(div);
+
+
+  const div = document.createElement('div');
+  div.setAttribute('class', 'main');
+  div.setAttribute('id', 'vansh');
+  div.setAttribute('gender', 'male');
+  div.style.color = 'Blue';
+  console.log(div);
+  div.style.backgroundColor = "white";
+  // just simply way to add text into a newly created element 
+  // div.innerText = "Fuck em all";
+
+  // 2nd way to add text in elemenst is that you need to first create a textfile with the help of    document.createTextNode() and then append it to the newly created element with the help of       appendChild() method.....
+  const divNode = document.createTextNode("fuck em all ");
+  div.appendChild(divnode);
+  document.body.appendChild(div);
+
+  function addlang(langname) {
+    const newelement = document.createElement('li');
+    const addtext = document.createTextNode(langname);
+    newelement.appendChild(addtext);
+    document.querySelector('.language').appendChild(newelement);
+  }
+  addlang("math");
+
+  // function addlang(langName) {
+  // const li = document.createElement('li');
+  //   li.innerText = langName;
+  //   document.querySelector('.language').appendChild(li);
+  // }
+  // addlang("typeScript");
+
+
+  // Edit
+  const secoundlang = document.querySelector("li:nth-child(2)")
+  secoundlang.innerHTML = "mojo";
+
+  const newli = document.createElement('li');
+  newli.textContent = "funny";
+  secoundlang.replaceWith(newli);
+
+  // edit 
+  const firstlang = document.querySelector("li:nth-child(1)");
+  const vansh = document.createElement('li');
+  vansh.textContent = "C programming language";
+  firstlang.replaceWith(vansh);
+
+  // Remove
+
+const lastlang = document.querySelector('li:last-child');
+lastlang.remove(); 
+</script>
+
+</html>
